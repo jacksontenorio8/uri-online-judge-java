@@ -1,0 +1,34 @@
+package br.com.jacksontenorio8.iniciante;
+import java.io.IOException;
+import java.util.Scanner;
+
+/* URI Online Judge | 1020
+Idade em Dias
+
+Leia um valor inteiro correspondente à idade de uma pessoa em dias e informe-a em anos, meses e dias
+
+Obs.: apenas para facilitar o cálculo, considere todo ano com 365 dias e todo mês com 30 dias. Nos casos de teste nunca haverá uma situação que permite 12 meses e alguns dias, como 360, 363 ou 364. Este é apenas um exercício com objetivo de testar raciocínio matemático simples.
+Entrada
+
+O arquivo de entrada contém um valor inteiro.
+Saída
+
+Imprima a saída conforme exemplo fornecido.
+*/
+public class IdadeDias {
+    public static void main(String[] args) throws IOException {
+        Scanner teclado = new Scanner(System.in);
+        int tempoInserido = teclado.nextInt();
+        int tempoAnos = tempoInserido/365;
+        tempoInserido -= tempoAnos * 365;
+        int tempoMes = tempoInserido/30;
+        tempoInserido -= tempoMes * 30;
+        int tempoDia = tempoInserido;
+
+
+
+        System.out.println(tempoAnos + " ano(s)");
+        System.out.println(tempoMes + " mes(es)");
+        System.out.println(tempoDia + " dia(s)");
+    }
+}
