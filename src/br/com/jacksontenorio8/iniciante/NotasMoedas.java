@@ -38,32 +38,52 @@ public class NotasMoedas {
         dinheiroFornecido = dinheiroFornecido % 100.0;
 
         valor = (int) dinheiroFornecido / 50;
-        System.out.println(" %d nota(s) de R$ 50.00%n");
+        System.out.printf("%d nota(s) de R$ 50.00%n", valor);
         dinheiroFornecido = dinheiroFornecido % 50.0;
 
         valor = (int) dinheiroFornecido / 20;
-        System.out.println(" nota(s) de R$ 20.00%n");
+        System.out.printf("%d nota(s) de R$ 20.00%n", valor);
         dinheiroFornecido = dinheiroFornecido % 20.0;
 
         valor = (int) dinheiroFornecido / 10;
-        System.out.println(" nota(s) de R$ 10.00%n");
+        System.out.printf("%d nota(s) de R$ 10.00%n", valor);
         dinheiroFornecido = dinheiroFornecido % 10.0;
 
         valor = (int) dinheiroFornecido / 5;
-        System.out.println(" nota(s) de R$ 5.00%n");
+        System.out.printf("%d nota(s) de R$ 5.00%n", valor);
         dinheiroFornecido = dinheiroFornecido % 5.0;
 
         valor = (int) dinheiroFornecido / 2;
-        System.out.println(" nota(s) de R$ 2.00%n");
+        System.out.printf("%d nota(s) de R$ 2.00%n", valor);
+        dinheiroFornecido = dinheiroFornecido % 2.0;
 
         dinheiroFornecido = dinheiroFornecido * 100;
-        System.out.println("MOEDAS:");
-        System.out.println(moedas1 + " moeda(s) de R$ 1.00");
-        System.out.println(moedas50 + " moeda(s) de R$ 0.50");
-        System.out.println(moedas25 + " moeda(s) de R$ 0.25");
-        System.out.println(moedas10 + " moeda(s) de R$ 0.10");
-        System.out.println(moedas05 + " moeda(s) de R$ 0.05");
-        System.out.println(moedas01 + " moeda(s) de R$ 0.01");
+
+        System.out.printf("MOEDAS:%n");
+
+        valor = (int) dinheiroFornecido / 100;
+        System.out.printf("%d moeda(s) de R$ 1.00%n", valor);
+        dinheiroFornecido = dinheiroFornecido % 100.0;
+
+        valor = (int) dinheiroFornecido / 50;
+        System.out.printf("%d moeda(s) de R$ 0.50%n", valor);
+        dinheiroFornecido = dinheiroFornecido % 50.0;
+
+        valor = (int) dinheiroFornecido / 25;
+        System.out.printf("%d moeda(s) de R$ 0.25%n", valor);
+        dinheiroFornecido = dinheiroFornecido % 25.0;
+
+        valor = (int) dinheiroFornecido / 10;
+        System.out.printf("%d moeda(s) de R$ 0.10%n", valor);
+        dinheiroFornecido = dinheiroFornecido % 10.0;
+
+        valor = (int) dinheiroFornecido / 5;
+        System.out.printf("%d moeda(s) de R$ 0.05%n", valor);
+        dinheiroFornecido = dinheiroFornecido % 5.0;
+
+        valor = (int) dinheiroFornecido / 1;
+        System.out.printf("%d moeda(s) de R$ 0.01%n", valor);
+        dinheiroFornecido = dinheiroFornecido % 1.0;
     }
 }
 
