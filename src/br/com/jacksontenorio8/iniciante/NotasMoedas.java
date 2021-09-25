@@ -1,7 +1,7 @@
 package br.com.jacksontenorio8.iniciante;
 import java.io.IOException;
 import java.util.Scanner;
-import static java.lang.Math.round;
+import java.util.Locale;
 
 /* URI | 1021
 Notas e Moedas
@@ -24,28 +24,47 @@ Obs: Utilize ponto (.) para separar a parte decimal.
 
 
 public class NotasMoedas {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  throws IOException{
 
-        Scanner s = new Scanner(System.in);
-        double N =  s.nextDouble();
-        int[] money = {100, 50, 20, 10, 5, 2};
-        double[] coin = {1.0, 0.50, 0.25, 0.10, 0.05, 0.01};
+        Locale.setDefault(Locale.US);
+        Scanner teclado = new Scanner(System.in);
+        double dinheiroFornecido = teclado.nextDouble();
+        int valor = 0;
 
-        double note;
+
         System.out.println("NOTAS:");
-        for (int i = 0; i < money.length; i++) {
-            note = N / money[i];
-            System.out.println((int)note + " nota(s) de R$ " + money[i] + ".00");
-            N = N % money[i];
-        }
+        valor = (int) dinheiroFornecido / 100;
+        System.out.printf("%d nota(s) de R$ 100.00%n", valor);
+        dinheiroFornecido = dinheiroFornecido % 100.0;
+
+        valor = (int) dinheiroFornecido / 50;
+        System.out.println(" %d nota(s) de R$ 50.00%n");
+        dinheiroFornecido = dinheiroFornecido % 50.0;
+
+        valor = (int) dinheiroFornecido / 20;
+        System.out.println(" nota(s) de R$ 20.00%n");
+        dinheiroFornecido = dinheiroFornecido % 20.0;
+
+        valor = (int) dinheiroFornecido / 10;
+        System.out.println(" nota(s) de R$ 10.00%n");
+        dinheiroFornecido = dinheiroFornecido % 10.0;
+
+        valor = (int) dinheiroFornecido / 5;
+        System.out.println(" nota(s) de R$ 5.00%n");
+        dinheiroFornecido = dinheiroFornecido % 5.0;
+
+        valor = (int) dinheiroFornecido / 2;
+        System.out.println(" nota(s) de R$ 2.00%n");
+
+        dinheiroFornecido = dinheiroFornecido * 100;
         System.out.println("MOEDAS:");
-        for (int i = 0; i < coin.length-1; i++) {
-            note = (double) (N / coin[i]);
-            System.out.println((int)note + " moeda(s) de R$ "+String.format("%.2f",coin[i]));
-            N = (double)(N % coin[i]);
-        }
-        note = (double) (N / coin[coin.length-1]);
-        System.out.println(round(note) + " moeda(s) de R$ "+String.format("%.2f",coin[coin.length-1]));
+        System.out.println(moedas1 + " moeda(s) de R$ 1.00");
+        System.out.println(moedas50 + " moeda(s) de R$ 0.50");
+        System.out.println(moedas25 + " moeda(s) de R$ 0.25");
+        System.out.println(moedas10 + " moeda(s) de R$ 0.10");
+        System.out.println(moedas05 + " moeda(s) de R$ 0.05");
+        System.out.println(moedas01 + " moeda(s) de R$ 0.01");
     }
 }
+
 
