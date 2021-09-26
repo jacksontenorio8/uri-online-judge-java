@@ -1,4 +1,7 @@
 package br.com.jacksontenorio8.iniciante;
+import java.io.IOException;
+import java.util.Scanner;
+
 /* URI | 1036
 Fórmula de Bhaskara
 
@@ -32,5 +35,15 @@ Exemplos de Entrada 	Exemplos de Saída
 
 @jacksontenorio8
 */
+
 public class FormulaBaskara {
+    public static void main (String[] args) throws IOException {
+
+        Scanner teclado = new Scanner(System.in);
+        double a = teclado.nextDouble();
+        double b = teclado.nextDouble();
+        double c = teclado.nextDouble();
+
+        double delta = b
+    }
 }
