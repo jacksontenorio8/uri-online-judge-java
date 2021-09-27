@@ -44,6 +44,15 @@ public class FormulaBaskara {
         double b = teclado.nextDouble();
         double c = teclado.nextDouble();
 
-        double delta = b
+        double delta = Math.pow(b, 2) - (4 * a * c);
+        double r1 = (- b + Math.sqrt(delta)) / (2 * a);
+        double r2 = (- b - Math.sqrt(delta)) / (2 * a);
+
+        if ( delta > 0) {
+            System.out.println(String.format("R1 = %.5f", r1));
+            System.out.println(String.format("R2 = %.5f", r2));
+        } else {
+            System.out.println("Impossivel calcular");
+        }
     }
 }
