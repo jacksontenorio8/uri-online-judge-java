@@ -1,3 +1,5 @@
+package br.com.jacksontenorio8.iniciante;
+
 import java.io.IOException;
 import java.util.Scanner;
 //URI 1001

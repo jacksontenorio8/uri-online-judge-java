@@ -44,16 +44,15 @@ public class FormulaBaskara {
         double b = teclado.nextDouble();
         double c = teclado.nextDouble();
 
-        if ((a == 0) | (b * b - 4 * a * c < 0)) {
+        if ((a == 0) || (b * b - 4 * a * c < 0)) {
             System.out.println("Impossivel calcular");
+        } else {
 
-        }else{
-
-        double bascara = Math.sqrt((b * b) - 4 * a * c);
-        double r1 = (-b + bascara) / (2 * a);
-        double r2 = (-b - bascara) / (2 * a);
-        System.out.println(String.format("R1 = %.5f", r1));
-        System.out.println(String.format("R2 = %.5f", r2));
+        double baskara = Math.sqrt((b * b) - 4 * a * c);
+        double r1 = (-b + baskara) / (2 * a);
+        double r2 = (-b - baskara) / (2 * a);
+        System.out.printf("R1 = %.5f%n", r1);
+        System.out.printf("R2 = %.5f%n", r2);
 
         }
     }
